@@ -12,13 +12,6 @@ function Get-SystemInfo {
     .EXAMPLE
     Get-SystemInfo
     # Retrieves basic system information.
-    
-    .EXAMPLE
-    Get-SystemInfo -Detailed
-    # Retrieves detailed system information.
-    
-    .NOTES
-    Author: IDO NA
     #>
     [CmdletBinding()]
     param (
