@@ -1,24 +1,32 @@
 function MyScript {
     <#
     .SYNOPSIS
-    Retrieves system information.
+    Creates a directory and a text file inside.
     
     .DESCRIPTION
-    This function provides detailed information about the system, including OS version, architecture, and memory.
+    This function creates a directory and a text file inside.
     
     .PARAMETER Detailed
-    If specified, provides detailed memory and disk information.
+    
     
     .EXAMPLE
-    Get-SystemInfo
-    # Retrieves basic system information.
+    MyScript
+    # Creates a directory and a text file inside.
     #>
     [CmdletBinding()]
     param (
-        [String] $DirectoryName,$Message
+        [ValidateScript({
+            if(Test-Path $_){
+                throw "Directory name exists" 
+            }
+            return $true
+        })]
+        [String] $DirectoryName,
+        [String] $Message
     )
     process {
         $input = New-Item -Path "$DirectoryName\HelloWorld.txt" -ItemType File -Force
         $Message | Out-File -FilePath $input
+        Write-Output "Directory created successfully!"
     }
 }
