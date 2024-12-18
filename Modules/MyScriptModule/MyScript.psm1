@@ -21,12 +21,15 @@ function MyScript {
             }
             return $true
         })]
-        [String] $DirectoryName,
+        [System.IO.FileInfo] $DirectoryName,
         [String] $Message
     )
     process {
-        $input = New-Item -Path "$DirectoryName\HelloWorld.txt" -ItemType File -Force
-        $Message | Out-File -FilePath $input
+        $file = New-Item -Path "$DirectoryName\HelloWorld.txt" -ItemType File -Force
+        $Message | Out-File -FilePath $file
         Write-Output "Directory created successfully!"
     }
 }
+
+
+
