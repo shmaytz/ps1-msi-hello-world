@@ -16,7 +16,7 @@ function MyScript {
     [CmdletBinding()]
     param (
         [ValidateScript({
-            if(Test-Path $_){
+            if(Test-Path -LiteralPath $_){
                 throw "Directory name exists" 
             }
             return $true
@@ -25,11 +25,8 @@ function MyScript {
         [String] $Message
     )
     process {
-        $file = New-Item -Path "$DirectoryName\HelloWorld.txt" -ItemType File -Force
-        $Message | Out-File -FilePath $file
+        $input = New-Item -Path "$DirectoryName\HelloWorld.txt" -ItemType File -Force
+        $Message | Set-Content -LiteralPath $input
         Write-Output "Directory created successfully!"
     }
 }
-
-
-
