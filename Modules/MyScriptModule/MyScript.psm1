@@ -25,8 +25,8 @@ function MyScript {
         [String] $Message
     )
     process {
-        $input = New-Item -Path "$DirectoryName\HelloWorld.txt" -ItemType File -Force
-        $Message | Set-Content -LiteralPath $input
+        $file = New-Item -Path "$DirectoryName\HelloWorld.txt" -ItemType File -Force
+        $Message | Set-Content -LiteralPath $file
         Write-Output "Directory created successfully!"
     }
 }
