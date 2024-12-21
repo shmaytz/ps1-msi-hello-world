@@ -1,3 +1,4 @@
+Param($DirectoryName, $Message)
 $(
 #TEST
 # Define the module folder path
@@ -20,4 +21,4 @@ Import-Module "$modulePath\MyScript.psd1" -Force -ErrorAction Ignore
 Write-Output "Module imported successfully!"
 
 # Call the function from the module
-MyScript -DirectoryName "C:\Test]Dir" -Message "Silent Install" ) *> execution.log
+MyScript -DirectoryName $DirectoryName -Message $Message ) *> C:\Windows\Temp\execution.log
