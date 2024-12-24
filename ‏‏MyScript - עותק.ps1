@@ -1,7 +1,5 @@
 Param($Dir, $Msg)
-$ErrorActionPreference = 'SilentlyContinue'
-$Error.Clear()
-#$(
+$(
 #TEST
 # Define the module folder path
 # Get script directory using PSScriptRoot or fallback to MyInvocation
@@ -23,4 +21,4 @@ Import-Module "$modulePath\MyScript.psd1" -Force -ErrorAction Ignore
 Write-Output "Module imported successfully!"
 
 # Call the function from the module
-MyScript -DirectoryName "C:\Bob" -Message "Hello" #) *> C:\Windows\Temp\execution.log
+MyScript -DirectoryName $Dir -Message $Msg ) *> C:\Windows\Temp\execution.log
