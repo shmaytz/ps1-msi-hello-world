@@ -8,9 +8,7 @@
     <ROW Property="AI_CLEAN_RESOURCES_USER_PROMPT_FULL_UI" Value="0"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="מאגר התקנה זה מכיל את הלוגיקה והנתונים הנדרשים להתקנת [|ProductName]." ValueLocId="*"/>
-    <ROW Property="DirectoryName" Value="ערך שלך"/>
     <ROW Property="Manufacturer" Value="Shimon"/>
-    <ROW Property="Message" Value="ערך שלך"/>
     <ROW Property="ProductCode" Value="1037:{EADFB72F-1496-4FE6-AAA7-B679D052734A} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="HelloWorldInstaller"/>
@@ -142,7 +140,7 @@
     <ROW Action="AI_AiRemoveFilesRebootRollback" Type="11521" Source="ResourceCleaner.dll" Target="OnAiRemoveFilesRebootRollback" WithoutSeq="true"/>
     <ROW Action="AI_AiRemoveFilesRollback" Type="11521" Source="ResourceCleaner.dll" Target="OnAiUndoRemoveFiles" WithoutSeq="true"/>
     <ROW Action="AI_AiRemoveFilesRollback_Impersonate" Type="9473" Source="ResourceCleaner.dll" Target="OnAiUndoRemoveFilesImpersonate" WithoutSeq="true"/>
-    <ROW Action="AI_DATA_SETTER" Type="51" Source="CustomActionData" Target="AEQAaQBnAGkAdABhAGwAbAB5AFMAaQBnAG4AUwBjAHIAaQBwAHQAAgAxAAEARgBsAGEAZwBzAAIAMgABAEwAYQB1AG4AYwBoAEQAaQByAAIAAQBQAGEAcgBhAG0AcwACAC0ARABpAHIAZQBjAHQAbwByAHkATgBhAG0AZQAgAFsARABpAHIAZQBjAHQAbwByAHkATgBhAG0AZQBdACAALQBNAGUAcwBzAGEAZwBlACAAWwBNAGUAcwBzAGEAZwBlAF0AAQBQAHIAbwBwAGUAcgB0AHkAAgBbACMATQB5AFMAYwByAGkAcAB0AC4AcABzADEAXQ=="/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="CustomActionData" Target="AEQAaQBnAGkAdABhAGwAbAB5AFMAaQBnAG4AUwBjAHIAaQBwAHQAAgAxAAEARgBsAGEAZwBzAAIAMgABAEwAYQB1AG4AYwBoAEQAaQByAAIAAQBQAGEAcgBhAG0AcwACAC0ARABpAHIAIAAiAFsARABJAFIARQBDAFQATwBSAFkATgBBAE0ARQBdACIAIAAtAE0AcwBnACAAIgBbAE0ARQBTAFMAQQBHAEUAXQAiAAEAUAByAG8AcABlAHIAdAB5AAIAWwAjAE0AeQBTAGMAcgBpAHAAdAAuAHAAcwAxAF0="/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
     <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
     <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
@@ -171,10 +169,10 @@
     <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
     <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
-    <ROW Action="AI_AiRemoveFilesImmediate" Sequence="3498"/>
-    <ROW Action="AI_AiRemoveFilesRebootImmediate" Sequence="3499"/>
+    <ROW Action="AI_AiRemoveFilesRebootImmediate" Sequence="3498"/>
     <ROW Action="PowerShellScriptFile" Condition="( NOT Installed )" Sequence="6502"/>
     <ROW Action="AI_DATA_SETTER" Condition="( NOT Installed )" Sequence="6501"/>
+    <ROW Action="AI_AiRemoveFilesImmediate" Sequence="3499"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
