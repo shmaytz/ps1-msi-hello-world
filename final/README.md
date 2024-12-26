@@ -40,12 +40,12 @@ The Installation consists of the following files:
 ```
 Modules/
 └── MyScriptModule/
-├  ├── MyScript.psd1  # Module Manifest File
-├  └── MyScript.psm1  # Module Script File
+|  ├── MyScript.psd1  # Module Manifest File
+|  └── MyScript.psm1  # Module Script File
 ├ HelloWorldInstaller.aip # Application project file
 ├ MyScript.ps1 # PS Script file
 ├ MyScriptInstaller.msi # Application installation file
-├ README.md # Installing instruction file
+└ README.md # Installing instruction file
 ```
 
 - **MyScript.psd1**: The manifest file containing metadata about the module.
