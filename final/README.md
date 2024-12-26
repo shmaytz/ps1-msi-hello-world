@@ -21,8 +21,9 @@ The **MyScriptModule** is a PowerShell module designed to verify successful inst
 2. Run the following command:
 ```
 # Specify the full path to the msi file
-# Enter the `DIRECTORYNAME` and `MESSAGE` to create (The parameters must be written in Uppercase letters)
+# Enter the DIRECTORYNAME and MESSAGE to create (The parameters must be written in Uppercase letters)
 msiexec /i MyScriptInstaller.msi /quiet DIRECTORYNAME="C:\TestDir" MESSAGE="Silent Install"
+```
 ---
 
 ## Verify Installation
@@ -39,12 +40,12 @@ The Installation consists of the following files:
 ```
 Modules/
 └── MyScriptModule/
-    ├── MyScript.psd1  # Module Manifest File
-    └── MyScript.psm1  # Module Script File
-HelloWorldInstaller.aip # Application project file
-MyScript.ps1 # PS Script file
-MyScriptInstaller.msi # Application installation file
-README.md # Installing instruction file
+├  ├── MyScript.psd1  # Module Manifest File
+├  └── MyScript.psm1  # Module Script File
+├ HelloWorldInstaller.aip # Application project file
+├ MyScript.ps1 # PS Script file
+├ MyScriptInstaller.msi # Application installation file
+├ README.md # Installing instruction file
 ```
 
 - **MyScript.psd1**: The manifest file containing metadata about the module.
